@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/usr/sbin/sshd -D &
+/usr/sbin/sshd -D -p 7080 &
 P1=$!
 /usr/sbin/dockerd &
 P2=$!

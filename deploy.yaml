@@ -1,0 +1,21 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: jenkins-agent
+spec:
+  selector:
+    matchLabels:
+      app: jenkins-agent
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: jenkins-agent
+    spec:
+      containers:
+      - name: jenkins-agent
+        image: troi.fritz.box/ssh-server-with-docker:latest
+        ports:
+        - containerPort: 7080
+        securityContext:
+          privileged: true
