@@ -1,1 +1,1 @@
-docker run --rm --privileged -p 22:22 ssh-server:latest
+docker run --rm --privileged -p 22:22 troi.fritz.box/ssh-server-with-docker:latest
