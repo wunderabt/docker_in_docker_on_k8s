@@ -1,0 +1,1 @@
+docker run --rm --privileged -p 22:22 ssh-server:latest
