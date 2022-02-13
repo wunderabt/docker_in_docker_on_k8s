@@ -26,5 +26,13 @@ $ kubectl port-forward service/jenkins-service 7080:7080
 
 you should now be able to connect to ssh
 ```bash
-$ ssh -p 7080 localhost
+$ ssh -p 7080 jenkins@localhost
+```
+
+
+Shutdown:
+
+```bash
+$ kubectl delete deploy jenkins-agent
+$ minikube stop
 ```
